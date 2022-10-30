@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Contact Form</title>
+    <title>Invoice Page</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     
-    <link href="/css/form.css" rel="stylesheet">
+    <!--<link href="/css/form.css" rel="stylesheet">-->
 </head>
 
 <body>
@@ -41,11 +41,94 @@
             </div>
         </div>
     </nav>
- <div class="container">
-   
-    <h1>Invoice</h1>
+    <div class="container rounded p-2 border border-2">
+        <div class="d-flex justify-content-end mt-3">
+            <button type="button" class="btn btn-dark" onclick="window.print()">Print this page</button>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-sm-7 d-flex justify-content-start">
+                <img src="/img/IdeaFoundryLogo.png" class="img-fluid" title="Invoice logo" alt="Invoice logo">
+            </div>
+            <div class="col-sm-5 d-flex justify-content-sm-end justify-content-start">
+                <strong>Costumer:</strong>&nbsp;0001
+            </div>
+        </div>
+        <hr>
+        <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col-sm-6 d-flex justify-content-start">
+                <strong>Date:</strong>&nbsp;30.10.2022
+            </div>
+            <div class="col-sm-6 d-flex justify-content-sm-end justify-content-start">
+                <strong>Invoice No:</strong>&nbsp;001
+            </div>
+        </div>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col-6 d-flex justify-content-start">
+                <div>
+                    <strong>Invoice to:</strong><br>
+                    <address>
+                        Danijel Kresic<br>
+                        Am Bahnhofstrasse 12<br>
+                        32545<br>
+                        Bad Oeynhausen
+                    </address>
+                </div>
+            </div>
 
- </div>
+            <div class="col-6 d-flex justify-content-end">
+                <div>
+                    <strong>Invoice to:</strong><br>
+                    <address>
+                        Mujo Didic<br>
+                        Am Wiesental 12<br>
+                        32545<br>
+                        Bad Oeynhausen
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="row table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Rate</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Design</td>
+                        <td>Website design</td>
+                        <td>60</td>
+                        <td>10</td>
+                        <td>600</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deployment</td>
+                        <td>Deployment and Hosting</td>
+                        <td>450</td>
+                        <td>1</td>
+                        <td>450</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <td>
+                        <tr></tr>
+                        <tr></tr>
+                    </td>
+                </tfoot>
+            </table>
+            
+        </div>
+
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
