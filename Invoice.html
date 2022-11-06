@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     
-    <!--<link href="/css/form.css" rel="stylesheet">-->
+    <link href="/css/invoice.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
         </div>
     </nav>
     <div class="container rounded p-2 border border-2">
-        <div class="d-flex justify-content-end mt-3">
+        <div class="d-flex justify-content-end mt-3 d-print-none">
             <button type="button" class="btn btn-dark" onclick="window.print()">Print this page</button>
         </div>
         <div class="row align-items-center">
@@ -67,7 +67,7 @@
             <div class="col-6 d-flex justify-content-start">
                 <div>
                     <strong>Invoice to:</strong><br>
-                    <address>
+                    <address class="address">
                         D. K.<br>
                         Am Bahnhofstrasse 12000<br>
                         32545<br>
@@ -79,7 +79,7 @@
             <div class="col-6 d-flex justify-content-end">
                 <div>
                     <strong>Pay to:</strong><br>
-                    <address>
+                    <address class="address">
                         Mujo D.<br>
                         Am Wiesental 12<br>
                         32545<br>
@@ -96,7 +96,7 @@
                         <th>Description</th>
                         <th>Rate</th>
                         <th>Qty</th>
-                        <th>Amount</th>
+                        <th class="text-end">Amount</th>
                     </tr>
                 </thead>
 
@@ -106,7 +106,7 @@
                         <td>Website design</td>
                         <td>60</td>
                         <td>10</td>
-                        <td>600</td>
+                        <td class="text-end">6000.00</td>
                     </tr>
 
                     <tr>
@@ -114,27 +114,46 @@
                         <td>Website development</td>
                         <td>150</td>
                         <td>10</td>
-                        <td>1500</td>
+                        <td class="text-end">15000.00</td>
                     </tr>
 
                     <tr>
                         <td>Deployment</td>
                         <td>Deployment and Hosting</td>
-                        <td>450</td>
+                        <td>4500.00</td>
                         <td>1</td>
-                        <td>450</td>
+                        <td class="text-end">4500.00</td>
                     </tr>
                 </tbody>
 
                 <tfoot>
-                    <td>
-                        <tr></tr>
-                        <tr></tr>
-                    </td>
+                    <tr>
+                        <td colspan="4">Sub Total</td>
+                        <td class="text-end">25500.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Tax</td>
+                        <td class="text-end">0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td class="text-end">2550.00</td>
+                    </tr>
                 </tfoot>
             </table>
-            
         </div>
+            <footer>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <strong>Note:</strong>&nbsp;This is computer genereated receipt and does not require 
+                            a signature.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+            
+        
 
     </div>
 
